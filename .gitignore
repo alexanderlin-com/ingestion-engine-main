@@ -1,0 +1,14 @@
+# Secrets
+.env
+
+# Python Cruft
+/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+/venv/
+
+# Data
+/documents/
+/ledger.jsonl
