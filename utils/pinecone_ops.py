@@ -50,13 +50,8 @@ def upsert_chunks(file_path: str, file_bytes: bytes, chunks: List[Dict]):
     vectors = []
     for chunk, emb in zip(chunks, embeddings):
         content_hash = sha256_digest(chunk["text"].encode("utf-8"))
-        chunk_id = make_chunk_id(
-            doc_id,
-            chunk["page_start"],
-            chunk["page_end"],
-            chunk["chunk_index"],
-            chunk["chunk_index"]  # reuse index for span for now
-        )
+        chunk_id = f"{doc_id}-{chunk['chunk_index']}"
+
         vectors.append({
             "id": chunk_id,
             "values": emb,

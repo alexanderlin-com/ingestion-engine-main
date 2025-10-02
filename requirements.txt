@@ -11,10 +11,12 @@ httpx==0.28.1
 idna==3.10
 jiter==0.11.0
 openai==2.0.1
+packaging==24.2
 pdfminer.six==20250506
 pdfplumber==0.11.7
 pillow==11.3.0
-pinecone-client==6.0.0
+pinecone==7.3.0
+pinecone-plugin-assistant==1.8.0
 pinecone-plugin-interface==0.0.7
 pycparser==2.23
 pydantic==2.11.9
